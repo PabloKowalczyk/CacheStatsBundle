@@ -1,0 +1,96 @@
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block toolbar %}
+    {% import "@PabloKCacheStats/partials/toolbar_macros.html.twig" as macros %}
+
+    {% set icon %}
+        {{ include('@PabloKCacheStats/partials/icon.html.twig') }}
+    {% endset %}
+
+    {% set text %}
+        {% set opcacheEnabled = collector.opcacheStats.enabled %}
+        <div class="sf-toolbar-info-group">
+            {{ macros.toolbar_Header('OPCache', opcacheEnabled) }}
+
+            {% if opcacheEnabled %}
+                {{
+                    macros.megabytes_row(
+                        'Cache usage',
+                        collector.opcacheStats.usage.asMegabytes,
+                        collector.opcacheStats.size.asMegabytes
+                    )
+                }}
+
+                {{
+                    macros.value_row(
+                        'Hit ratio',
+                        collector.opcacheStats.hitRatio | round(2),
+                        '%'
+                    )
+                }}
+
+                {{
+                    macros.values_row(
+                        'Script slots usage',
+                        collector.opcacheStats.scriptSlotsUsage,
+                        collector.opcacheStats.scriptSlotsSize
+                    )
+                }}
+
+                {{
+                    macros.megabytes_row(
+                        'Interned strings usage',
+                        collector.opcacheStats.internedStringsUsage.asMegabytes,
+                        collector.opcacheStats.internedStringsSize.asMegabytes
+                    )
+                }}
+            {% endif %}
+        </div>
+
+        {% set realPathEnabled = collector.realPathStats.enabled %}
+        <div class="sf-toolbar-info-group">
+            {{ macros.toolbar_Header('Realpath', realPathEnabled) }}
+
+            {% if realPathEnabled %}
+                {{
+                    macros.megabytes_row(
+                        'Cache usage',
+                        collector.realPathStats.usage.asMegabytes,
+                        collector.realPathStats.size.asMegabytes
+                    )
+                }}
+            {% endif %}
+        </div>
+
+        {% set apcuEnabled = collector.apcuStats.enabled %}
+        <div class="sf-toolbar-info-group">
+            {{ macros.toolbar_Header('APCu', apcuEnabled) }}
+
+            {% if apcuEnabled %}
+                {{ macros.value_row('Memory type', collector.apcuStats.memoryType) }}
+
+                {{
+                    macros.megabytes_row(
+                        'Memory usage',
+                        collector.apcuStats.memoryUsage.asMegabytes,
+                        collector.apcuStats.memorySize.asMegabytes
+                    )
+                }}
+
+                {{
+                    macros.values_row(
+                        'Slots usage',
+                        collector.apcuStats.slotsUsage,
+                        collector.apcuStats.slotsSize
+                    )
+                }}
+
+            {% endif %}
+        </div>
+
+    {% endset %}
+
+    {# the 'link' value set to 'false' means that this panel doesn't
+       show a section in the web profiler #}
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
+{% endblock %}

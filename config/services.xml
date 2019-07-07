@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd"
+>
+    <services>
+        <service id="PabloK\CacheStatsBundle\Application\StatsProvider\RealPathProvider" public="false" />
+        <service id="PabloK\CacheStatsBundle\Application\StatsProvider\OpcacheProvider" public="false" />
+        <service id="PabloK\CacheStatsBundle\Application\StatsProvider\ApcuProvider" public="false" />
+
+        <service
+            id="PabloK\CacheStatsBundle\DataCollector\CacheStatsDataCollector"
+            public="false"
+        >
+            <argument
+                id="PabloK\CacheStatsBundle\Application\StatsProvider\RealPathProvider"
+                key="$realPathProvider"
+                type="service"
+            />
+            <argument
+                id="PabloK\CacheStatsBundle\Application\StatsProvider\OpcacheProvider"
+                key="$opcacheProvider"
+                type="service"
+            />
+            <argument
+                id="PabloK\CacheStatsBundle\Application\StatsProvider\ApcuProvider"
+                key="$apcuProvider"
+                type="service"
+            />
+
+            <tag
+                name="data_collector"
+                id="pablok.cache_stats_bundle.cache_stats_collector"
+                template="@PabloKCacheStats/cache_stats"
+                priority="-300"
+            />
+        </service>
+    </services>
+</container>

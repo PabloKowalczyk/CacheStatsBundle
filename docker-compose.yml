@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    apache:
+        build:
+            context: ./docker/apache
+        volumes:
+            - ./project:/var/www/html
+            - ./composer.json:/var/www/bundle/composer.json:ro
+            - ./src:/var/www/bundle/src:ro
+            - ./config:/var/www/bundle/config:ro
+            - ./docker/apache/php.ini:/usr/local/etc/php/conf.d/99-user.ini:ro
+        ports:
+            - "9310:80"

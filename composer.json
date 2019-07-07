@@ -1,0 +1,36 @@
+{
+    "name": "pablok/cache-stats-bundle",
+    "type": "symfony-bundle",
+    "description": "PabloK CacheStatsBundle",
+    "keywords": [
+        "opcache",
+        "realpath",
+        "bundle",
+        "symfony",
+        "apcu",
+        "statistics"
+    ],
+    "homepage": "https://github.com/PabloKowalczyk/CacheStatsBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PabloKowalczyk",
+            "homepage": "https://github.com/PabloKowalczyk"
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "require": {
+        "php": "^7.2",
+        "symfony/config": "^3.4 || ^4.2",
+        "symfony/dependency-injection": "^3.4 || ^4.2",
+        "symfony/http-kernel": "^3.4 || ^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PabloK\\CacheStatsBundle\\": "src"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{% macro megabytes_format(size) %}
+    {{ size|number_format(2, '.', '') }}
+{% endmacro %}
+
+{% macro toolbar_Header(title, enabled) %}
+    <div class="sf-toolbar-info-piece">
+        <b>{{ title }}</b>
+        <span class="sf-toolbar-status sf-toolbar-status-{{ enabled ? 'green' : 'red' }}">
+            {{ enabled ? 'Enabled' : 'Disabled' }}
+        </span>
+    </div>
+{% endmacro %}
+
+{% macro megabytes_row(title, usage, size) %}
+    {% import _self as macros %}
+
+    <div class="sf-toolbar-info-piece">
+        <b>{{ title }}</b>
+        <span class="sf-toolbar-status">
+            {{ macros.megabytes_format(usage) }}
+            /
+            {{ macros.megabytes_format(size) }} MB
+        </span>
+    </div>
+{% endmacro %}
+
+{% macro values_row(title, usage, size) %}
+    <div class="sf-toolbar-info-piece">
+        <b>{{ title }}</b>
+        <span class="sf-toolbar-status">
+            {{ usage }}
+            /
+            {{ size }}
+        </span>
+    </div>
+{% endmacro %}
+
+{% macro value_row(title, value, suffix = '') %}
+    <div class="sf-toolbar-info-piece">
+        <b>{{ title }}</b>
+        <span class="sf-toolbar-status">
+            {{ value }}{{ suffix }}
+        </span>
+    </div>
+{% endmacro %}
