@@ -19,6 +19,7 @@ final class ApcuProvider
         $slotsUsage = 0;
         $memorySize = Size::nullSize();
         $memoryUsage = Size::nullSize();
+        $memoryType = '';
 
         if ($enabled) {
             $cacheStats = \apcu_cache_info(true);
