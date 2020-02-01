@@ -23,5 +23,5 @@ RUN usermod --non-unique --uid 1000 www-data
 ENV COMPOSER_HOME /var/www/.composer
 RUN mkdir -p /var/www/.composer && \
     chown -R www-data /var/www/.composer && \
-    chroot --userspec www-data / composer global require hirak/prestissimo -a \
-    && rm -rf /var/www/.composer/cache
+    chroot --userspec www-data / composer global require hirak/prestissimo -a && \
+    composer clear-cache
