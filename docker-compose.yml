@@ -1,4 +1,4 @@
-version: '3'
+version: '3.6'
 
 services:
     apache:
@@ -6,9 +6,13 @@ services:
             context: ./docker/apache
         volumes:
             - ./project:/var/www/html
-            - ./composer.json:/var/www/bundle/composer.json:ro
             - ./src:/var/www/bundle/src:ro
+            - ./tests:/var/www/bundle/tests:ro
+            - ./vendor:/var/www/bundle/vendor:rw
+            - ./composer.json:/var/www/bundle/composer.json:rw
+            - ./composer.lock:/var/www/bundle/composer.lock:rw
             - ./config:/var/www/bundle/config:ro
+            - ./phpunit.xml.dist:/var/www/bundle/phpunit.xml.dist:ro
             - ./docker/apache/php.ini:/usr/local/etc/php/conf.d/99-user.ini:ro
         ports:
             - "9310:80"
