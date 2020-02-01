@@ -10,7 +10,11 @@ final class ApcuProvider
 {
     public function provide(): ApcuStats
     {
-        $enabled = \extension_loaded('apcu') && \filter_var(\ini_get('apc.enabled'), FILTER_VALIDATE_BOOLEAN);
+        $iniName = \PHP_SAPI === 'cli'
+            ? 'apc.enable_cli'
+            : 'apc.enabled'
+        ;
+        $enabled = \extension_loaded('apcu') && \filter_var(\ini_get($iniName), FILTER_VALIDATE_BOOLEAN);
         $slotsSize = 0;
         $slotsUsage = 0;
         $memorySize = Size::nullSize();
