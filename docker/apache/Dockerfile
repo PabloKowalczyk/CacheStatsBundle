@@ -17,7 +17,7 @@ RUN pecl install apcu-5.1.17 && \
         opcache \
         apcu
 
-COPY --from=composer:1.8 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.9 /usr/bin/composer /usr/bin/composer
 
 RUN usermod --non-unique --uid 1000 www-data
 ENV COMPOSER_HOME /var/www/.composer
