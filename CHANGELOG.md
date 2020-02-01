@@ -6,9 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.1.1] - 2020-02-01
+
+### Fixed
+- [#3] Fix missing `$memoryType` in ApcuProvider
+
 ## [v0.1.0] - 2019-07-07
 ### Added
 - Toolbar panel with cache statistics
 
-[Unreleased]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.1...HEAD
 [v0.1.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/releases/tag/v0.1.0
+[v0.1.1]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.0...v0.1.1
+[#3]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/3
