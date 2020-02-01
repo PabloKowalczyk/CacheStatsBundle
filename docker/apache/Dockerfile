@@ -6,10 +6,10 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
 RUN apt-get update && \
-    apt-get install unzip && \
-    apt-get autoremove && \
-    apt-get autoclean && \
-    apt-get clean
+    apt-get -y install unzip && \
+    apt-get -y autoremove && \
+    apt-get -y autoclean && \
+    apt-get -y clean
 
 RUN a2enmod rewrite
 RUN pecl install apcu-5.1.17 && \
@@ -17,11 +17,11 @@ RUN pecl install apcu-5.1.17 && \
         opcache \
         apcu
 
-COPY --from=composer:1.8 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.9 /usr/bin/composer /usr/bin/composer
 
 RUN usermod --non-unique --uid 1000 www-data
 ENV COMPOSER_HOME /var/www/.composer
 RUN mkdir -p /var/www/.composer && \
     chown -R www-data /var/www/.composer && \
-    chroot --userspec www-data / composer global require hirak/prestissimo -a \
-    && rm -rf /var/www/.composer/cache
+    chroot --userspec www-data / composer global require hirak/prestissimo -a && \
+    composer clear-cache
