@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.2.0] - 2020-02-01
+
+### Added
+
+- [#5] Add Symfony v5.x support
+
+### Fixed
+
+- [#7] Fix CacheStatsDataCollector compatibility with Symfony v5
+
+### Removed
+
+- [#6] Drop Symfony v4.2 support
+
 ## [v0.1.1] - 2020-02-01
 
 ### Fixed
@@ -18,4 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [Unreleased]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.1...HEAD
 [v0.1.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/releases/tag/v0.1.0
 [v0.1.1]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.0...v0.1.1
+[v0.2.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.1...v0.2.0
 [#3]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/3
+[#5]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/5
+[#6]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/6
+[#7]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/7
