@@ -22,5 +22,4 @@ COPY --from=composer:2.0.7 /usr/bin/composer /usr/bin/composer
 RUN usermod --non-unique --uid 1000 www-data
 ENV COMPOSER_HOME /var/www/.composer
 RUN mkdir -p /var/www/.composer && \
-    chown -R www-data /var/www/.composer && \
-    composer clear-cache
+    chown -R www-data /var/www/.composer
