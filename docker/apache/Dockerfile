@@ -19,7 +19,7 @@ RUN pecl install apcu-5.1.17 && \
 
 COPY --from=composer:2.0.7 /usr/bin/composer /usr/bin/composer
 
-RUN usermod --non-unique --uid 1000 www-data
+RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 ENV COMPOSER_HOME /var/www/.composer
 RUN mkdir -p /var/www/.composer && \
     chown -R www-data /var/www/.composer
