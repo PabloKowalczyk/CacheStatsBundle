@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.3.24-apache
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
@@ -17,11 +17,10 @@ RUN pecl install apcu-5.1.17 && \
         opcache \
         apcu
 
-COPY --from=composer:1.9 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.0.7 /usr/bin/composer /usr/bin/composer
 
 RUN usermod --non-unique --uid 1000 www-data
 ENV COMPOSER_HOME /var/www/.composer
 RUN mkdir -p /var/www/.composer && \
     chown -R www-data /var/www/.composer && \
-    chroot --userspec www-data / composer global require hirak/prestissimo -a && \
     composer clear-cache
