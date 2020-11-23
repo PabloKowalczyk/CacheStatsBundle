@@ -37,8 +37,11 @@ final class CacheStatsDataCollector extends DataCollector
         $this->apcuProvider = $apcuProvider;
     }
 
-    /** @inheritDoc */
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
+    /**
+     * @inheritDoc
+     * @param null|\Throwable $exception
+     */
+    public function collect(Request $request, Response $response, $exception = null)
     {
         $this->data[self::REAL_PATH_KEY] = $this->realPathProvider
             ->provide();

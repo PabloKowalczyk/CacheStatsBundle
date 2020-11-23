@@ -14,5 +14,6 @@ services:
             - ./config:/var/www/bundle/config:ro
             - ./phpunit.xml.dist:/var/www/bundle/phpunit.xml.dist:ro
             - ./docker/apache/php.ini:/usr/local/etc/php/conf.d/99-user.ini:ro
+            - ~/.composer:/var/www/.composer
         ports:
             - "9310:80"
