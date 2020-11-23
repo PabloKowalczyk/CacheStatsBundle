@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb8f2492dfeef64fff7e7ec8fe8163ab",
+    "content-hash": "10f05f4eec20103b920a3f647a61853e",
     "packages": [
         {
             "name": "pablok/cache-stats-bundle",
@@ -12,10 +12,10 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/bundle",
-                "reference": "6a39e27e6053454f6b10178b3acd818fb9233332"
+                "reference": "cc8cbae2d9369a948adb01066a2be727343e8c36"
             },
             "require": {
-                "php": "^7.3",
+                "php": ">=7.3",
                 "symfony/config": "^3.4 || ^4.3 || ^5.0",
                 "symfony/dependency-injection": "^3.4 || ^4.3 || ^5.0",
                 "symfony/http-kernel": "^3.4 || ^4.3 || ^5.0"
@@ -2784,7 +2784,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0.8"
+        "php": ">=7.3"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
