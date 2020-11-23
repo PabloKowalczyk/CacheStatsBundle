@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#9] Drop PHP v7.2 support
 
+### Fixed
+
+- [#10] Add PHP v8 support
+
 ## [v0.2.0] - 2020-02-01
 
 ### Added
@@ -42,3 +46,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#6]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/6
 [#7]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/7
 [#9]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/9
+[#10]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/10
