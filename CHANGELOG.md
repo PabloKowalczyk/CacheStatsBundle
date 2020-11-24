@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - [#13] Drop Symfony v4.3 support
+- [#14] Drop Symfony v5.0 support
 
 ## [v0.2.0] - 2020-02-01
 
@@ -59,3 +60,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#11]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/11
 [#12]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/12
 [#13]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/13
+[#14]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/14
