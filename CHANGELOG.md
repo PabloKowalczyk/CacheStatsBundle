@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#10] Add PHP v8 support
 - [#11] Fix missing "$hitRation" variable when OPCache is disabled
 
+### Changed
+
+- [#12] Change a red badge of disabled caches to grey
+
 ## [v0.2.0] - 2020-02-01
 
 ### Added
@@ -49,3 +53,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#9]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/9
 [#10]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/10
 [#11]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/11
+[#12]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/12
