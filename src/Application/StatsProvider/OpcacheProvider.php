@@ -29,7 +29,7 @@ final class OpcacheProvider
             $internedStringNumber = $opcacheStatus['interned_strings_usage']['number_of_strings'] ?? 0;
             $scriptSlotsSize = $opcacheStatus['opcache_statistics']['max_cached_keys'] ?? 0;
             $scriptSlotsUsage = $opcacheStatus['opcache_statistics']['num_cached_keys'] ?? 0;
-            $hitRation = $opcacheStatus['opcache_statistics']['opcache_hit_rate'] ?? 0.0;
+            $hitRatio = $opcacheStatus['opcache_statistics']['opcache_hit_rate'] ?? 0.0;
         }
 
         return new OpcacheStats(
@@ -41,7 +41,7 @@ final class OpcacheProvider
             $internedStringNumber,
             $scriptSlotsSize,
             $scriptSlotsUsage,
-            $hitRation
+            $hitRatio
         );
     }
 }
