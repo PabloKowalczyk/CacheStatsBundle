@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#12] Change a red badge of disabled caches to grey
 
+### Removed
+
+- [#13] Drop Symfony v4.3 support
+
 ## [v0.2.0] - 2020-02-01
 
 ### Added
@@ -54,3 +58,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#10]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/10
 [#11]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/11
 [#12]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/12
+[#13]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/13
