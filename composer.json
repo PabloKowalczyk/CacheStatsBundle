@@ -23,7 +23,7 @@
         "preferred-install": "dist"
     },
     "require": {
-        "php": ">=7.3",
+        "php": ">=7.4",
         "symfony/config": "^3.4 || ^4.4 || ^5.1",
         "symfony/dependency-injection": "^3.4 || ^4.4 || ^5.1",
         "symfony/http-kernel": "^3.4 || ^4.4 || ^5.1"
