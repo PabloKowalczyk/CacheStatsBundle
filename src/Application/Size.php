@@ -6,10 +6,9 @@ namespace PabloK\CacheStatsBundle\Application;
 
 final class Size
 {
-    const MEGABYTE_IN_BYTES = 1024 ** 2;
+    private const MEGABYTE_IN_BYTES = 1024 ** 2;
 
-    /** @var int */
-    private $sizeInBytes;
+    private int $sizeInBytes;
 
     private function __construct(int $sizeInBytes)
     {

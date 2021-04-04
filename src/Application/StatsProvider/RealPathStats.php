@@ -8,12 +8,9 @@ use PabloK\CacheStatsBundle\Application\Size;
 
 final class RealPathStats
 {
-    /** @var bool */
-    private $enabled;
-    /** @var Size */
-    private $size;
-    /** @var Size */
-    private $usage;
+    private bool $enabled;
+    private Size $size;
+    private Size $usage;
 
     public function __construct(
         bool $enabled,
