@@ -12,13 +12,13 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/bundle",
-                "reference": "5ec41b356fe952bfde5d312923247fe1eda50dba"
+                "reference": "2ff7a3a574860fbb49c6c378f91094544519e103"
             },
             "require": {
                 "php": ">=7.4",
-                "symfony/config": "^3.4 || ^4.4 || ^5.1",
-                "symfony/dependency-injection": "^3.4 || ^4.4 || ^5.1",
-                "symfony/http-kernel": "^3.4 || ^4.4 || ^5.1"
+                "symfony/config": "^4.4 || ^5.2",
+                "symfony/dependency-injection": "^4.4 || ^5.2",
+                "symfony/http-kernel": "^4.4 || ^5.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.4"
