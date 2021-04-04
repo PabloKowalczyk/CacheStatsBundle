@@ -8,6 +8,7 @@
         <service id="PabloK\CacheStatsBundle\Application\StatsProvider\RealPathProvider" public="false" />
         <service id="PabloK\CacheStatsBundle\Application\StatsProvider\OpcacheProvider" public="false" />
         <service id="PabloK\CacheStatsBundle\Application\StatsProvider\ApcuProvider" public="false" />
+        <service id="PabloK\CacheStatsBundle\Application\StatsProvider\JitProvider" public="false" />
 
         <service
             id="PabloK\CacheStatsBundle\DataCollector\CacheStatsDataCollector"
@@ -26,6 +27,11 @@
             <argument
                 id="PabloK\CacheStatsBundle\Application\StatsProvider\ApcuProvider"
                 key="$apcuProvider"
+                type="service"
+            />
+            <argument
+                id="PabloK\CacheStatsBundle\Application\StatsProvider\JitProvider"
+                key="$jitProvider"
                 type="service"
             />
 

@@ -6,6 +6,8 @@ namespace PabloK\CacheStatsBundle\DataCollector;
 
 use PabloK\CacheStatsBundle\Application\StatsProvider\ApcuProvider;
 use PabloK\CacheStatsBundle\Application\StatsProvider\ApcuStats;
+use PabloK\CacheStatsBundle\Application\StatsProvider\JitProvider;
+use PabloK\CacheStatsBundle\Application\StatsProvider\JitStats;
 use PabloK\CacheStatsBundle\Application\StatsProvider\OpcacheProvider;
 use PabloK\CacheStatsBundle\Application\StatsProvider\OpcacheStats;
 use PabloK\CacheStatsBundle\Application\StatsProvider\RealPathProvider;
@@ -19,19 +21,23 @@ final class CacheStatsDataCollector extends DataCollector
     private const REAL_PATH_KEY = 'realpath';
     private const OPCACHE_KEY = 'opcache';
     private const APCU_KEY = 'apcu';
+    private const JIT_KEY = 'jit';
 
     private RealPathProvider $realPathProvider;
     private OpcacheProvider $opcacheProvider;
     private ApcuProvider $apcuProvider;
+    private JitProvider $jitProvider;
 
     public function __construct(
         RealPathProvider $realPathProvider,
         OpcacheProvider $opcacheProvider,
-        ApcuProvider $apcuProvider
+        ApcuProvider $apcuProvider,
+        JitProvider $jitProvider
     ) {
         $this->realPathProvider = $realPathProvider;
         $this->opcacheProvider = $opcacheProvider;
         $this->apcuProvider = $apcuProvider;
+        $this->jitProvider = $jitProvider;
     }
 
     /**
@@ -46,6 +52,9 @@ final class CacheStatsDataCollector extends DataCollector
             ->provide();
         $this->data[self::APCU_KEY] = $this->apcuProvider
             ->provide();
+        $this->data[self::JIT_KEY] = $this->jitProvider
+            ->provide()
+        ;
     }
 
     /** @inheritDoc */
@@ -72,5 +81,10 @@ final class CacheStatsDataCollector extends DataCollector
     public function apcuStats(): ApcuStats
     {
         return $this->data[self::APCU_KEY];
+    }
+
+    public function jitStats(): JitStats
+    {
+        return $this->data[self::JIT_KEY];
     }
 }
