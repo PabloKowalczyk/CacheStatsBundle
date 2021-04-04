@@ -1,4 +1,4 @@
-FROM php:7.3.24-apache
+FROM php:7.4.16-apache
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
