@@ -8,24 +8,15 @@ use PabloK\CacheStatsBundle\Application\Size;
 
 final class OpcacheStats
 {
-    /** @var bool */
-    private $enabled;
-    /** @var Size */
-    private $size;
-    /** @var Size */
-    private $usage;
-    /** @var Size */
-    private $internedStringsSize;
-    /** @var Size */
-    private $internedStringsUsage;
-    /** @var int */
-    private $internedStringsNumber;
-    /** @var int */
-    private $scriptSlotsSize;
-    /** @var int */
-    private $scriptSlotsUsage;
-    /** @var float */
-    private $hitRatio;
+    private bool $enabled;
+    private Size $size;
+    private Size $usage;
+    private Size $internedStringsSize;
+    private Size $internedStringsUsage;
+    private int $internedStringsNumber;
+    private int $scriptSlotsSize;
+    private int $scriptSlotsUsage;
+    private float $hitRatio;
 
     public function __construct(
         bool $enabled,

@@ -8,18 +8,12 @@ use PabloK\CacheStatsBundle\Application\Size;
 
 final class ApcuStats
 {
-    /** @var bool */
-    private $enabled;
-    /** @var int */
-    private $slotsSize;
-    /** @var int */
-    private $slotsUsage;
-    /** @var Size */
-    private $memorySize;
-    /** @var Size */
-    private $memoryUsage;
-    /** @var string */
-    private $memoryType;
+    private bool $enabled;
+    private int $slotsSize;
+    private int $slotsUsage;
+    private Size $memorySize;
+    private Size $memoryUsage;
+    private string $memoryType;
 
     public function __construct(
         bool $enabled,
