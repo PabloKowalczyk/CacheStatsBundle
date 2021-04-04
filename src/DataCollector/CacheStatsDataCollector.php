@@ -20,12 +20,9 @@ final class CacheStatsDataCollector extends DataCollector
     private const OPCACHE_KEY = 'opcache';
     private const APCU_KEY = 'apcu';
 
-    /** @var RealPathProvider */
-    private $realPathProvider;
-    /** @var OpcacheProvider */
-    private $opcacheProvider;
-    /** @var ApcuProvider */
-    private $apcuProvider;
+    private RealPathProvider $realPathProvider;
+    private OpcacheProvider $opcacheProvider;
+    private ApcuProvider $apcuProvider;
 
     public function __construct(
         RealPathProvider $realPathProvider,
@@ -41,7 +38,7 @@ final class CacheStatsDataCollector extends DataCollector
      * @inheritDoc
      * @param null|\Throwable $exception
      */
-    public function collect(Request $request, Response $response, $exception = null)
+    public function collect(Request $request, Response $response, $exception = null): void
     {
         $this->data[self::REAL_PATH_KEY] = $this->realPathProvider
             ->provide();
@@ -52,12 +49,12 @@ final class CacheStatsDataCollector extends DataCollector
     }
 
     /** @inheritDoc */
-    public function getName()
+    public function getName(): string
     {
         return 'pablok.cache_stats_bundle.cache_stats_collector';
     }
 
-    public function reset()
+    public function reset(): void
     {
         $this->data = [];
     }

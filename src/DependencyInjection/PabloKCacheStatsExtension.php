@@ -11,7 +11,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 final class PabloKCacheStatsExtension extends Extension
 {
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $directory = \dirname(__DIR__, 2);
         $fileLocator = new FileLocator("{$directory}/config");
