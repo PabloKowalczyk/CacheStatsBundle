@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.4.0] - 2021-04-04
+
+### Added
+
+- [#20] Add JIT cache statistics
+
+### Removed
+
+- [#17] Drop PHP v7 3 support
+- [#19] Drop Symfony v3.4 support
+- [#21] Drop Symfony v5.1 support
+
 ## [v0.3.0] - 2020-11-24
 
 ### Fixed
@@ -46,11 +58,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Toolbar panel with cache statistics
 
-[Unreleased]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.4.0...HEAD
 [v0.1.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/releases/tag/v0.1.0
 [v0.1.1]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.0...v0.1.1
 [v0.2.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.1...v0.2.0
 [v0.3.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.2.0...v0.3.0
+[v0.4.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.3.0...v0.4.0
 [#3]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/3
 [#5]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/5
 [#6]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/6
@@ -61,3 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#12]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/12
 [#13]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/13
 [#14]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/14
+[#17]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/17
+[#19]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/19
+[#20]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/20
+[#21]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/21
