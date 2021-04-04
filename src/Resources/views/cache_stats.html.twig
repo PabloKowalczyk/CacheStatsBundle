@@ -47,6 +47,21 @@
             {% endif %}
         </div>
 
+        {% set jitEnabled = collector.jitStats.enabled %}
+        <div class="sf-toolbar-info-group">
+            {{ macros.toolbar_Header('JIT cache', jitEnabled) }}
+
+            {% if jitEnabled %}
+                {{
+                    macros.megabytes_row(
+                        'Cache usage',
+                        collector.jitStats.bufferUsage.asMegabytes,
+                        collector.jitStats.bufferSize.asMegabytes
+                    )
+                }}
+            {% endif %}
+        </div>
+
         {% set realPathEnabled = collector.realPathStats.enabled %}
         <div class="sf-toolbar-info-group">
             {{ macros.toolbar_Header('Realpath', realPathEnabled) }}
