@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.5.0] - 2021-12-27
+
+### Added
+
+- [#24] Add Symfony 6.0 support
+
+### Removed
+
+- [#23] Drop Symfony 5.2 and 5.3 support
+
 ## [v0.4.0] - 2021-04-04
 
 ### Added
@@ -64,6 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.2.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.1.1...v0.2.0
 [v0.3.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.2.0...v0.3.0
 [v0.4.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.3.0...v0.4.0
+[v0.5.0]: https://github.com/PabloKowalczyk/CacheStatsBundle/compare/v0.4.0...v0.5.0
 [#3]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/3
 [#5]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/5
 [#6]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/6
@@ -78,3 +89,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#19]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/19
 [#20]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/20
 [#21]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/21
+[#23]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/23
+[#24]: https://github.com/PabloKowalczyk/CacheStatsBundle/pull/24
