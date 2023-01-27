@@ -8,11 +8,8 @@ final class Size
 {
     private const MEGABYTE_IN_BYTES = 1024 ** 2;
 
-    private int $sizeInBytes;
-
-    private function __construct(int $sizeInBytes)
+    private function __construct(private int $sizeInBytes)
     {
-        $this->sizeInBytes = $sizeInBytes;
     }
 
     public static function fromBytes(int $bytes): self

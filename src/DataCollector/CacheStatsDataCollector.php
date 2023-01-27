@@ -23,21 +23,12 @@ final class CacheStatsDataCollector extends DataCollector
     private const APCU_KEY = 'apcu';
     private const JIT_KEY = 'jit';
 
-    private RealPathProvider $realPathProvider;
-    private OpcacheProvider $opcacheProvider;
-    private ApcuProvider $apcuProvider;
-    private JitProvider $jitProvider;
-
     public function __construct(
-        RealPathProvider $realPathProvider,
-        OpcacheProvider $opcacheProvider,
-        ApcuProvider $apcuProvider,
-        JitProvider $jitProvider
+        private RealPathProvider $realPathProvider,
+        private OpcacheProvider $opcacheProvider,
+        private ApcuProvider $apcuProvider,
+        private JitProvider $jitProvider
     ) {
-        $this->realPathProvider = $realPathProvider;
-        $this->opcacheProvider = $opcacheProvider;
-        $this->apcuProvider = $apcuProvider;
-        $this->jitProvider = $jitProvider;
     }
 
     /**
