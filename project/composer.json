@@ -5,18 +5,18 @@
         "php": ">=7.4",
         "pablok/cache-stats-bundle": "*@dev",
         "symfony/apache-pack": "^1.0",
-        "symfony/console": "^4.4",
+        "symfony/console": "^5.4",
         "symfony/flex": "^1.0",
-        "symfony/framework-bundle": "^4.4",
-        "symfony/yaml": "^4.4"
+        "symfony/framework-bundle": "^5.4",
+        "symfony/yaml": "^5.4"
     },
     "require-dev": {
-        "symfony/debug-bundle": "^4.4",
-        "symfony/dotenv": "^4.4",
+        "symfony/debug-bundle": "^5.4",
+        "symfony/dotenv": "^5.4",
         "symfony/monolog-bundle": "^3.0",
-        "symfony/stopwatch": "^4.4",
-        "symfony/var-dumper": "^4.4",
-        "symfony/web-profiler-bundle": "^4.4"
+        "symfony/stopwatch": "^5.4",
+        "symfony/var-dumper": "^5.4",
+        "symfony/web-profiler-bundle": "^5.4"
     },
     "repositories": [
         {
@@ -62,7 +62,7 @@
         "symfony": {
             "id": "01DDWPCT2STFBV6NAWQFDPAKT7",
             "allow-contrib": false,
-            "require": "^4.4"
+            "require": "^5.4"
         }
     }
 }
