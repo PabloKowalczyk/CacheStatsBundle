@@ -8,18 +8,11 @@ use PabloK\CacheStatsBundle\Application\Size;
 
 final class RealPathStats
 {
-    private bool $enabled;
-    private Size $size;
-    private Size $usage;
-
     public function __construct(
-        bool $enabled,
-        Size $size,
-        Size $usage
+        private bool $enabled,
+        private Size $size,
+        private Size $usage,
     ) {
-        $this->enabled = $enabled;
-        $this->size = $size;
-        $this->usage = $usage;
     }
 
     public function enabled(): bool
