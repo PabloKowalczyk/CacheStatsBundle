@@ -22,12 +22,6 @@
         "sort-packages": true,
         "preferred-install": "dist"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/LucasCH13/CacheStatsBundle"
-        }
-    ],
     "require": {
         "php": ">=8.0",
         "symfony/config": "^5.4 || ^6.3 || ^7.0",
