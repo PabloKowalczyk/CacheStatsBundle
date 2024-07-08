@@ -9,24 +9,9 @@ use PabloK\CacheStatsBundle\Application\Size;
 final class RealPathStats
 {
     public function __construct(
-        private bool $enabled,
-        private Size $size,
-        private Size $usage,
+        public readonly bool $enabled,
+        public readonly Size $size,
+        public readonly Size $usage,
     ) {
-    }
-
-    public function enabled(): bool
-    {
-        return $this->enabled;
-    }
-
-    public function size(): Size
-    {
-        return $this->size;
-    }
-
-    public function usage(): Size
-    {
-        return $this->usage;
     }
 }

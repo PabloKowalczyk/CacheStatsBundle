@@ -8,7 +8,7 @@ final class Size
 {
     private const MEGABYTE_IN_BYTES = 1024 ** 2;
 
-    private function __construct(private int $sizeInBytes)
+    private function __construct(private readonly int $sizeInBytes)
     {
     }
 
