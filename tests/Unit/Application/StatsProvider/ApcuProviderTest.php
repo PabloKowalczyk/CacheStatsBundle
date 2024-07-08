@@ -17,15 +17,15 @@ final class ApcuProviderTest extends UnitTestCase
 
         $apcuProvider = $this->createApcuProvider();
         $apcuStatus = $apcuProvider->provide();
-        $memorySize = $apcuStatus->memorySize();
-        $memoryUsage = $apcuStatus->memoryUsage();
+        $memorySize = $apcuStatus->memorySize;
+        $memoryUsage = $apcuStatus->memoryUsage;
 
-        $this->assertTrue($apcuStatus->enabled());
+        $this->assertTrue($apcuStatus->enabled);
         $this->assertGreaterThan(0, $memorySize->asBytes());
         $this->assertGreaterThan(0, $memoryUsage->asBytes());
-        $this->assertGreaterThan(0, $apcuStatus->slotsSize());
-        $this->assertGreaterThanOrEqual(0, $apcuStatus->slotsUsage());
-        $this->assertNotEmpty($apcuStatus->memoryType());
+        $this->assertGreaterThan(0, $apcuStatus->slotsSize);
+        $this->assertGreaterThanOrEqual(0, $apcuStatus->slotsUsage);
+        $this->assertNotEmpty($apcuStatus->memoryType);
     }
 
     public function test_apcu_provider_works_with_extension_disabled(): void
@@ -36,15 +36,15 @@ final class ApcuProviderTest extends UnitTestCase
 
         $apcuProvider = $this->createApcuProvider();
         $apcuStatus = $apcuProvider->provide();
-        $memorySize = $apcuStatus->memorySize();
-        $memoryUsage = $apcuStatus->memoryUsage();
+        $memorySize = $apcuStatus->memorySize;
+        $memoryUsage = $apcuStatus->memoryUsage;
 
-        $this->assertFalse($apcuStatus->enabled());
+        $this->assertFalse($apcuStatus->enabled);
         $this->assertSame(0, $memorySize->asBytes());
         $this->assertSame(0, $memoryUsage->asBytes());
-        $this->assertSame(0, $apcuStatus->slotsSize());
-        $this->assertSame(0, $apcuStatus->slotsUsage());
-        $this->assertEmpty($apcuStatus->memoryType());
+        $this->assertSame(0, $apcuStatus->slotsSize);
+        $this->assertSame(0, $apcuStatus->slotsUsage);
+        $this->assertEmpty($apcuStatus->memoryType);
     }
 
     private function isApcuEnabled(): bool

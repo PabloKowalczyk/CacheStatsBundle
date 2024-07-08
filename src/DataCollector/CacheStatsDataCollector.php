@@ -24,10 +24,10 @@ final class CacheStatsDataCollector extends DataCollector
     private const JIT_KEY = 'jit';
 
     public function __construct(
-        private RealPathProvider $realPathProvider,
-        private OpcacheProvider $opcacheProvider,
-        private ApcuProvider $apcuProvider,
-        private JitProvider $jitProvider
+        private readonly RealPathProvider $realPathProvider,
+        private readonly OpcacheProvider $opcacheProvider,
+        private readonly ApcuProvider $apcuProvider,
+        private readonly JitProvider $jitProvider
     ) {
     }
 
