@@ -15,7 +15,7 @@ final class PabloKCacheStatsExtension extends Extension
     {
         $directory = \dirname(__DIR__, 2);
         $fileLocator = new FileLocator("{$directory}/config");
-        $loader = new Loader\XmlFileLoader($container, $fileLocator);
-        $loader->load('services.xml');
+        $loader = new Loader\PhpFileLoader($container, $fileLocator);
+        $loader->load('services.php');
     }
 }
